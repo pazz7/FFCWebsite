@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /maintenance.html
+Disallow: /coming-soon.html
+Disallow: /404.html
+
+Sitemap: https://www.fusionfitnessclubph.com/sitemap.xml
