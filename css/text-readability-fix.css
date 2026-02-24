@@ -1,0 +1,36 @@
+/* ===========================================
+   Text Readability Fix - Fusion Fitness Club
+   Fixes light/invisible text on white backgrounds
+   =========================================== */
+
+/* Class description paragraphs on white sections */
+#gdlr-core-wrapper-2 .gdlr-core-text-box-item-content {
+    color: #2a2a2a !important;
+}
+
+/* Column service content (Martial Arts Infused, Result Oriented, Fun sections) */
+#gdlr-core-wrapper-2 .gdlr-core-column-service-content {
+    color: #3a3a3a !important;
+}
+
+/* Column service titles on white sections */
+#gdlr-core-wrapper-2 .gdlr-core-column-service-title {
+    color: #1a1a1a !important;
+}
+
+/* Index.html - Martial Arts PRO, All Fitness Levels, Community section */
+.gdlr-core-pbf-wrapper[style*="background-color: #ffffff"] .gdlr-core-text-box-item-content {
+    color: #2a2a2a !important;
+}
+
+.gdlr-core-pbf-wrapper[style*="background-color: #ffffff"] .gdlr-core-title-item-title {
+    color: #060606 !important;
+}
+
+/* MMA page Greg Jackson description */
+.gdlr-core-pbf-wrapper[style*="background-color: #ffffff"] .gdlr-core-text-box-item-content[style*="color: #606060"] {
+    color: #3a3a3a !important;
+}
+
+/* Fix: White-Line-BG.jpg overlay covering text */
+#gdlr-core-wrapper-2 .gdlr-core-pbf-background-wrap { z-index: -1; position: relative; }
