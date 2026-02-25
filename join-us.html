@@ -64,6 +64,11 @@
 }
     </script>
 <style>
+    /* Phase 3: Dark body background to eliminate white gaps between sections */
+    .zyth-body-outer-wrapper, body.zyth-full .zyth-body-wrapper,
+    body.zyth-boxed .zyth-body-wrapper { background-color: #191919 !important; }
+    /* Phase 3: Force shape divider SVGs to dark fill */
+    .gdlr-core-shape-divider-item svg path { fill: #191919 !important; }
     /* Phase 3: Center footer social icons under logo */
     .zyth-footer-column.zyth-column-15 .gdlr-core-social-network-item { text-align: center !important; }
     /* Phase 3: Remove empty pinterest placeholder icon */
@@ -386,7 +391,7 @@
                                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 20px;">
                                                     <div class="gdlr-core-title-item-title-wrap">
                                                         <h3 class="gdlr-core-title-item-title gdlr-core-skin-title"
-                                                            style="font-size: 48px; font-weight: 600; font-style: italic; letter-spacing: 0px; text-transform: none; color: #ffffff;">
+                                                            style="font-size: 48px; font-weight: 600; font-style: italic; letter-spacing: 0px; text-transform: none; color: #ffffff; text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
                                                             Select Your Plan<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
                                                         </h3>
                                                     </div>
