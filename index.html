@@ -13,7 +13,6 @@
     <!-- Resource hints for faster loading -->
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -371,17 +370,19 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
     <link rel="preload" href="upload/fusion-fitness-club-makati-martial-arts-gym-overlay.png" as="image" fetchpriority="high" />
     <link rel="preload" href="upload/fusion-fitness-club-makati-martial-arts-gym-hero.jpg" as="image" />
 
-    <!-- Deferred CSS (non-render-blocking) -->
+    <!-- Structural CSS (render-blocking but needed for layout stability / CLS) -->
+    <link rel="stylesheet" href="js/plugins/goodlayers-core/include/css/page-builder.css" />
+    <link rel="stylesheet" href="css/style-core.css" />
+    <link rel="stylesheet" href="css/zyth-style-custom.css" />
+    <link rel="stylesheet" href="js/plugins/revslider/public/assets/css/rs6.css?ver=6.5.8" />
+
+    <!-- Deferred CSS (non-render-blocking - icons, fonts, extras) -->
     <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/fontawesome/font-awesome.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/elegant/elegant-font.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/ionicons/ionicons.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/gdlr-custom-icon/gdlr-custom-icon.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/style.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="js/plugins/goodlayers-core/include/css/page-builder.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="js/plugins/mp-timetable/media/css/style.css?ver=2.4.2" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="css/style-core.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="css/zyth-style-custom.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="js/plugins/revslider/public/assets/css/rs6.css?ver=6.5.8" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="css/text-readability-fix.css" media="print" onload="this.media='all'" />
     <noscript>
         <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/fontawesome/font-awesome.css" />
@@ -697,12 +698,13 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                             <rs-module id="rev_slider_1_1" data-version="6.5.8">
                                                 <rs-slides>
                                                     <rs-slide style="position: absolute;" data-key="rs-1" data-title="Slide" data-in="o:0;" data-out="a:false;" data-p2="01 Our Company">
-                                                        <img fetchpriority="high" src="upload/fusion-fitness-club-makati-martial-arts-gym-hero.jpg"
+                                                        <img fetchpriority="high" src="js/plugins/revslider/public/assets/assets/dummy.png"
                                                              alt="Fusion Fitness Club Makati martial arts gym hero"
                                                              title="slider-1"
                                                              width="1784"
                                                              height="1184"
-                                                             class="rev-slidebg tp-rs-img"
+                                                             class="rev-slidebg tp-rs-img rs-lazyload"
+                                                             data-lazyload="upload/fusion-fitness-club-makati-martial-arts-gym-hero.jpg"
                                                              data-bg="p:center top;"
                                                              data-no-retina="" />
 
@@ -742,11 +744,12 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                                                   data-dim="w:416px,322px,344px,212px;h:198px,153px,164px,101px;"
                                                                   data-frame_999="o:0;st:w;sR:8700;"
                                                                   style="z-index: 8;">
-                                                            <img src="upload/slider-1-1.png"
+                                                            <img src="js/plugins/revslider/public/assets/assets/dummy.png"
                                                                  alt="Fusion Fitness Club slider text"
-                                                                 class="tp-rs-img"
+                                                                 class="tp-rs-img rs-lazyload"
                                                                  width="416"
                                                                  height="198"
+                                                                 data-lazyload="upload/slider-1-1.png"
                                                                  data-no-retina="" />
                                                         </rs-layer>
 
@@ -783,11 +786,12 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                                                   data-dim="w:720px,558px,423px,260px;h:353px,273px,207px,127px;"
                                                                   data-frame_999="o:0;st:w;sR:8700;"
                                                                   style="z-index: 9;">
-                                                            <img fetchpriority="high" src="upload/fusion-fitness-club-makati-martial-arts-gym-overlay.png"
+                                                            <img src="js/plugins/revslider/public/assets/assets/dummy.png"
                                                                  alt="Fusion Fitness Club Makati martial arts infused gym overlay"
-                                                                 class="tp-rs-img"
+                                                                 class="tp-rs-img rs-lazyload"
                                                                  width="720"
                                                                  height="353"
+                                                                 data-lazyload="upload/fusion-fitness-club-makati-martial-arts-gym-overlay.png"
                                                                  data-no-retina="" />
                                                         </rs-layer>
 
