@@ -373,37 +373,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
 /* Force font-display: swap for faster text rendering */
 @font-face{font-family:'FontAwesome';font-display:swap;src:url('js/plugins/goodlayers-core/plugins/fontawesome/fontawesomewebfont.woff2') format('woff2')}
 @font-face{font-family:'gdl-custom-set';font-display:swap;src:url('js/plugins/goodlayers-core/plugins/gdlr-custom-icon/gdl-custom-set.woff2') format('woff2')}
-
-/* Hero placeholder - shows instantly, hidden when RevSlider initializes */
-.hero-placeholder{position:absolute;top:0;left:0;right:0;width:100%;height:500px;background:#141414 url('upload/fusion-fitness-club-makati-martial-arts-gym-hero.jpg') center top/cover no-repeat;overflow:hidden;display:block;z-index:5}
-.hero-placeholder-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center}
-.hero-placeholder-text{font-family:'Poppins',sans-serif;text-transform:uppercase;font-weight:800;color:#a6a6a6;line-height:1.2}
-.hero-placeholder-text .line1{font-size:43px}
-.hero-placeholder-text .line2{font-size:43px}
-.hero-placeholder-overlay{position:absolute;right:0;bottom:0;width:260px;height:127px}
-.hero-placeholder-overlay img{width:100%;height:100%;object-fit:cover}
-.hero-placeholder-logo{margin-bottom:20px}
-.hero-placeholder-logo img{width:212px;height:auto}
-/* Ensure the slider container is positioned for overlay */
-.gdlr-core-revolution-slider-item{position:relative}
-/* Hide placeholder once RevSlider is visible */
-.hero-placeholder.hidden{display:none}
-@media only screen and (min-width:481px) and (max-width:778px){
-  .hero-placeholder{height:700px}
-  .hero-placeholder-text .line1,.hero-placeholder-text .line2{font-size:62px}
-  .hero-placeholder-overlay{width:423px;height:207px}
-  .hero-placeholder-logo img{width:344px}
-}
-@media only screen and (min-width:779px){
-  .hero-placeholder{height:1088px}
-  .hero-placeholder-text .line1,.hero-placeholder-text .line2{font-size:100px}
-  .hero-placeholder-overlay{width:720px;height:353px;right:auto;left:766px;bottom:auto;top:589px}
-  .hero-placeholder-logo img{width:416px}
-}
 </style>
-
-    <!-- Preload hero background image (loaded via CSS background-image) -->
-    <link rel="preload" href="upload/fusion-fitness-club-makati-martial-arts-gym-hero.jpg" as="image" fetchpriority="high" />
 
     <!-- Structural CSS (render-blocking but needed for layout stability / CLS) -->
     <link rel="stylesheet" href="js/plugins/goodlayers-core/include/css/page-builder.css" />
@@ -727,28 +697,13 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
                                 <div class="gdlr-core-pbf-element">
                                     <div class="gdlr-core-revolution-slider-item gdlr-core-item-pdlr gdlr-core-item-pdb" style="padding-bottom: 0px;">
-                                        <!-- Hero placeholder for instant paint (hidden when RevSlider loads) -->
-                                        <div class="hero-placeholder" id="hero-placeholder">
-                                            <div class="hero-placeholder-inner">
-                                                <div class="hero-placeholder-logo">
-                                                    <img src="upload/slider-1-1.png" alt="Fusion Fitness Club" width="416" height="198" />
-                                                </div>
-                                                <div class="hero-placeholder-text">
-                                                    <div class="line1">Martial Arts</div>
-                                                    <div class="line2">Infused Fitness</div>
-                                                </div>
-                                                <div class="hero-placeholder-overlay">
-                                                    <img fetchpriority="high" src="upload/fusion-fitness-club-makati-martial-arts-gym-overlay.png" alt="Fusion Fitness Club Makati" width="720" height="353" />
-                                                </div>
-                                            </div>
-                                        </div>
                                         <!-- START Homepage Gym REVOLUTION SLIDER 6.5.8 -->
                                         <p class="rs-p-wp-fix"></p>
                                         <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="visibility: hidden; background: transparent; padding: 0; margin: 0px auto; margin-top: 0; margin-bottom: 0;">
                                             <rs-module id="rev_slider_1_1" data-version="6.5.8">
                                                 <rs-slides>
                                                     <rs-slide style="position: absolute;" data-key="rs-1" data-title="Slide" data-in="o:0;" data-out="a:false;" data-p2="01 Our Company">
-                                                        <img src="js/plugins/revslider/public/assets/assets/dummy.png"
+                                                        <img fetchpriority="high" src="js/plugins/revslider/public/assets/assets/dummy.png"
                                                              alt="Fusion Fitness Club Makati martial arts gym hero"
                                                              title="slider-1"
                                                              width="1784"
@@ -5162,9 +5117,6 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                         allowHTML5AutoPlayOnAndroid: true,
                     },
                 });
-                // Hide hero placeholder once RevSlider is ready
-                var hp = document.getElementById('hero-placeholder');
-                if (hp) hp.style.display = 'none';
             },
         }; // End of RevInitScript
 
