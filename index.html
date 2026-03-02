@@ -1,18 +1,23 @@
 ﻿<!DOCTYPE html>
 <html lang="en-US" class="no-js">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NLHT9PKCNN"></script>
+    <!-- Google tag (gtag.js) - deferred until after page load -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-NLHT9PKCNN');
+      window.addEventListener('load', function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NLHT9PKCNN';
+        s.async = true;
+        document.head.appendChild(s);
+        s.onload = function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-NLHT9PKCNN');
+        };
+      });
     </script>
     <meta charset="UTF-8" />
     <!-- Resource hints for faster loading -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -364,6 +369,10 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
 /* Prevent layout shift */
 .zyth-modern-menu-nav-base{display:none}
 @media only screen and (max-width:999px){.zyth-modern-menu-nav-base{display:none}}
+
+/* Force font-display: swap for faster text rendering */
+@font-face{font-family:'FontAwesome';font-display:swap;src:url('js/plugins/goodlayers-core/plugins/fontawesome/fontawesomewebfont.woff2') format('woff2')}
+@font-face{font-family:'gdl-custom-set';font-display:swap;src:url('js/plugins/goodlayers-core/plugins/gdlr-custom-icon/gdl-custom-set.woff2') format('woff2')}
 </style>
 
     <!-- Preload LCP images for faster rendering -->
@@ -1273,7 +1282,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                                                             <div class="gdlr-core-page-list gdlr-core-style-modern gdlr-core-item-mgb gdlr-core-zoom-on-hover">
                                                                                 <div class="gdlr-core-thumbnail gdlr-core-media-image">
                                                                                     <a href="fit.html">
-                                                                                        <img loading="lazy" src="upload/istock-1149242325-1-600x800_2.jpg" alt="11" width="auto" height="auto" title="iStock-1149242325" />
+                                                                                        <img loading="lazy" src="upload/istock-1149242325-1-600x800_2.jpg" alt="Boxing training at Fusion Fitness Club" width="600" height="800" title="iStock-1149242325" />
                                                                                     </a>
                                                                                 </div>
                                                                                 <div class="gdlr-core-thumbnail-overlay" style="background-color: #313131;"></div>
@@ -1288,7 +1297,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                                                             <div class="gdlr-core-page-list gdlr-core-style-modern gdlr-core-item-mgb gdlr-core-zoom-on-hover">
                                                                                 <div class="gdlr-core-thumbnail gdlr-core-media-image">
                                                                                     <a href="sweat.html">
-                                                                                        <img loading="lazy" src="upload/group-fitness-hiit-class-600x800.jpg" alt="11" width="auto" height="auto" title="shutterstock_1058059004" />
+                                                                                        <img loading="lazy" src="upload/group-fitness-hiit-class-600x800.jpg" alt="Group HIIT fitness class" width="600" height="800" title="shutterstock_1058059004" />
                                                                                     </a>
                                                                                 </div>
                                                                                 <div class="gdlr-core-thumbnail-overlay" style="background-color: #4d4d4e;"></div>
@@ -1303,10 +1312,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                                                             <div class="gdlr-core-page-list gdlr-core-style-modern gdlr-core-item-mgb gdlr-core-zoom-on-hover">
                                                                                 <div class="gdlr-core-thumbnail gdlr-core-media-image">
                                                                                     <a href="strike.html">
-                                                                                        <img loading="lazy" src="upload/image-from-rawpixel-id-14141-jpeg-600x800.jpg"
-                                                                                             alt="11"
-                                                                                             width="auto"
-                                                                                             height="auto"
+                                                                                        <img loading="lazy" src="upload/image-from-rawpixel-id-14141-jpeg-600x800.jpg" alt="Strike boxing class" width="600" height="800"
                                                                                              title="image-from-rawpixel-id-14141-jpeg" />
                                                                                     </a>
                                                                                 </div>
@@ -1322,10 +1328,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                                                             <div class="gdlr-core-page-list gdlr-core-style-modern gdlr-core-item-mgb gdlr-core-zoom-on-hover">
                                                                                 <div class="gdlr-core-thumbnail gdlr-core-media-image">
                                                                                     <a href="mma.html">
-                                                                                        <img loading="lazy" src="upload/mma-mixed-martial-arts-training-600x800.jpg"
-                                                                                             alt="11"
-                                                                                             width="auto"
-                                                                                             height="auto"
+                                                                                        <img loading="lazy" src="upload/mma-mixed-martial-arts-training-600x800.jpg" alt="MMA mixed martial arts training" width="600" height="800"
                                                                                              title="image-from-rawpixel-id-1201598-jpeg" />
                                                                                     </a>
                                                                                 </div>
@@ -1656,7 +1659,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                                             <li class="gdlr-core-item-mglr">
                                                                 <div class="gdlr-core-testimonial clearfix">
                                                                     <div class="gdlr-core-testimonial-author-image gdlr-core-media-image">
-                                                                        <img loading="lazy" src="upload/P004.jpg" alt="11" width="auto" height="auto" title="P03" style="max-width:100%;height:auto;" />
+                                                                        <img loading="lazy" src="upload/P004.jpg" alt="Member testimonial" width="200" height="200" title="P03" style="max-width:100%;height:auto;" />
                                                                     </div>
                                                                     <div class="gdlr-core-testimonial-content-wrap" style="padding-top: 110px;">
                                                                         <div class="gdlr-core-testimonial-quote gdlr-core-quote-font gdlr-core-skin-icon" style="font-size: 278px; font-weight: 700; margin-top: 40px; color: #4f4f4f;">
@@ -1686,7 +1689,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                                             <li class="gdlr-core-item-mglr">
                                                                 <div class="gdlr-core-testimonial clearfix">
                                                                     <div class="gdlr-core-testimonial-author-image gdlr-core-media-image">
-                                                                        <img loading="lazy" src="upload/Jane.jpg" alt="11" width="auto" height="auto" title="Jane" style="max-width:100%;height:auto;" />
+                                                                        <img loading="lazy" src="upload/Jane.jpg" alt="Member Jane testimonial" width="200" height="200" title="Jane" style="max-width:100%;height:auto;" />
                                                                     </div>
                                                                     <div class="gdlr-core-testimonial-content-wrap" style="padding-top: 110px;">
                                                                         <div class="gdlr-core-testimonial-quote gdlr-core-quote-font gdlr-core-skin-icon" style="font-size: 278px; font-weight: 700; margin-top: 40px; color: #4f4f4f;">
@@ -1712,7 +1715,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                                             <li class="gdlr-core-item-mglr">
                                                                 <div class="gdlr-core-testimonial clearfix">
                                                                     <div class="gdlr-core-testimonial-author-image gdlr-core-media-image">
-                                                                        <img loading="lazy" src="upload/P002.jpg" alt="11" width="auto" height="auto" title="P02" style="max-width:100%;height:auto;" />
+                                                                        <img loading="lazy" src="upload/P002.jpg" alt="Member testimonial" width="200" height="200" title="P02" style="max-width:100%;height:auto;" />
                                                                     </div>
                                                                     <div class="gdlr-core-testimonial-content-wrap" style="padding-top: 110px;">
                                                                         <div class="gdlr-core-testimonial-quote gdlr-core-quote-font gdlr-core-skin-icon" style="font-size: 278px; font-weight: 700; margin-top: 40px; color: #4f4f4f;">
@@ -1745,7 +1748,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                                             <li class="gdlr-core-item-mglr">
                                                                 <div class="gdlr-core-testimonial clearfix">
                                                                     <div class="gdlr-core-testimonial-author-image gdlr-core-media-image">
-                                                                        <img loading="lazy" src="upload/P003.jpg" alt="11" width="auto" height="auto" title="P03" style="max-width:100%;height:auto;" />
+                                                                        <img loading="lazy" src="upload/P003.jpg" alt="Member testimonial" width="200" height="200" title="P03" style="max-width:100%;height:auto;" />
                                                                     </div>
                                                                     <div class="gdlr-core-testimonial-content-wrap" style="padding-top: 110px;">
                                                                         <div class="gdlr-core-testimonial-quote gdlr-core-quote-font gdlr-core-skin-icon" style="font-size: 278px; font-weight: 700; margin-top: 40px; color: #4f4f4f;">
@@ -1775,7 +1778,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                                             <li class="gdlr-core-item-mglr">
                                                                 <div class="gdlr-core-testimonial clearfix">
                                                                     <div class="gdlr-core-testimonial-author-image gdlr-core-media-image">
-                                                                        <img loading="lazy" src="upload/P4.jpg" alt="11" width="auto" height="auto" title="P4" style="max-width:100%;height:auto;" />
+                                                                        <img loading="lazy" src="upload/P4.jpg" alt="Member testimonial" width="200" height="200" title="P4" style="max-width:100%;height:auto;" />
                                                                     </div>
                                                                     <div class="gdlr-core-testimonial-content-wrap" style="padding-top: 110px;">
                                                                         <div class="gdlr-core-testimonial-quote gdlr-core-quote-font gdlr-core-skin-icon" style="font-size: 278px; font-weight: 700; margin-top: 40px; color: #4f4f4f;">
@@ -1829,7 +1832,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                             <div class="gdlr-core-image-item gdlr-core-item-pdb gdlr-core-right-align gdlr-core-item-pdlr" style="padding-bottom: 0px;">
                                                 <div class="gdlr-core-image-item-wrap gdlr-core-media-image gdlr-core-image-item-style-rectangle" style="border-width: 0px; max-width: 106px;">
                                                     <a href="https://www.facebook.com/fusionfitnessclubph" target="_blank">
-                                                        <img loading="lazy" src="upload/Google.png" alt="11" width="auto" height="auto" title="Google" style="max-width:100%;height:auto;" />
+                                                        <img loading="lazy" src="upload/Google.png" alt="Google reviews" width="200" height="60" title="Google" style="max-width:100%;height:auto;" />
                                                     </a>
                                                 </div>
                                             </div>
@@ -2563,7 +2566,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                         <div class="gdlr-core-pbf-element">
                                             <div class="gdlr-core-image-item gdlr-core-item-pdb gdlr-core-left-align gdlr-core-item-pdlr" style="padding-bottom: 50px;">
                                                 <div class="gdlr-core-image-item-wrap gdlr-core-media-image gdlr-core-image-item-style-rectangle" style="border-width: 0px; max-width: 60px;">
-                                                    <img loading="lazy" src="upload/Logo01.png" alt="11" width="auto" height="auto" title="Logo01" style="max-width:100%;height:auto;" />
+                                                    <img loading="lazy" src="upload/Logo01.png" alt="Partner logo" width="200" height="60" title="Logo01" style="max-width:100%;height:auto;" />
                                                 </div>
                                             </div>
                                         </div>
@@ -2610,7 +2613,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                         <div class="gdlr-core-pbf-element">
                                             <div class="gdlr-core-image-item gdlr-core-item-pdb gdlr-core-left-align gdlr-core-item-pdlr" style="padding-bottom: 50px;">
                                                 <div class="gdlr-core-image-item-wrap gdlr-core-media-image gdlr-core-image-item-style-rectangle" style="border-width: 0px; max-width: 60px;">
-                                                    <img loading="lazy" src="upload/Logo02.png" alt="11" width="auto" height="auto" title="Logo02" style="max-width:100%;height:auto;" />
+                                                    <img loading="lazy" src="upload/Logo02.png" alt="Partner logo" width="200" height="60" title="Logo02" style="max-width:100%;height:auto;" />
                                                 </div>
                                             </div>
                                         </div>
@@ -2657,7 +2660,7 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                         <div class="gdlr-core-pbf-element">
                                             <div class="gdlr-core-image-item gdlr-core-item-pdb gdlr-core-left-align gdlr-core-item-pdlr" style="padding-bottom: 50px;">
                                                 <div class="gdlr-core-image-item-wrap gdlr-core-media-image gdlr-core-image-item-style-rectangle" style="border-width: 0px; max-width: 60px;">
-                                                    <img loading="lazy" src="upload/Logo03.png" alt="11" width="auto" height="auto" title="Logo03" style="max-width:100%;height:auto;" />
+                                                    <img loading="lazy" src="upload/Logo03.png" alt="Partner logo" width="200" height="60" title="Logo03" style="max-width:100%;height:auto;" />
                                                 </div>
                                             </div>
                                         </div>
@@ -4623,42 +4626,42 @@ rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
                                                     <div class="gdlr-core-item-list gdlr-core-gallery-column gdlr-core-column-10 gdlr-core-column-first">
                                                         <div class="gdlr-core-gallery-list gdlr-core-media-image">
                                                             <a class="gdlr-core-lightgallery gdlr-core-js" href="upload/iStock-1141197680.jpg" data-lightbox-group="gdlr-core-img-group-1">
-                                                                <img loading="lazy" src="upload/iStock-1141197680-600x600.jpg" alt="11" width="auto" height="auto" title="iStock-1141197680" style="max-width:100%;height:auto;" />
+                                                                <img loading="lazy" src="upload/iStock-1141197680-600x600.jpg" alt="Fitness training session" width="600" height="600" title="iStock-1141197680" style="max-width:100%;height:auto;" />
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="gdlr-core-item-list gdlr-core-gallery-column gdlr-core-column-10">
                                                         <div class="gdlr-core-gallery-list gdlr-core-media-image">
                                                             <a class="gdlr-core-lightgallery gdlr-core-js" href="upload/iStock-972833328.jpg" data-lightbox-group="gdlr-core-img-group-1">
-                                                                <img loading="lazy" src="upload/iStock-972833328-600x600.jpg" alt="11" width="auto" height="auto" title="iStock-972833328" style="max-width:100%;height:auto;" />
+                                                                <img loading="lazy" src="upload/iStock-972833328-600x600.jpg" alt="Boxing workout session" width="600" height="600" title="iStock-972833328" style="max-width:100%;height:auto;" />
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="gdlr-core-item-list gdlr-core-gallery-column gdlr-core-column-10">
                                                         <div class="gdlr-core-gallery-list gdlr-core-media-image">
                                                             <a class="gdlr-core-lightgallery gdlr-core-js" href="upload/iStock-1149242325.jpg" data-lightbox-group="gdlr-core-img-group-1">
-                                                                <img loading="lazy" src="upload/iStock-1149242325-600x600.jpg" alt="11" width="auto" height="auto" title="iStock-1149242325" style="max-width:100%;height:auto;" />
+                                                                <img loading="lazy" src="upload/iStock-1149242325-600x600.jpg" alt="Boxing training" width="600" height="600" title="iStock-1149242325" style="max-width:100%;height:auto;" />
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="gdlr-core-item-list gdlr-core-gallery-column gdlr-core-column-10">
                                                         <div class="gdlr-core-gallery-list gdlr-core-media-image">
                                                             <a class="gdlr-core-lightgallery gdlr-core-js" href="upload/gym-functional-training-equipment.jpg" data-lightbox-group="gdlr-core-img-group-1">
-                                                                <img loading="lazy" src="upload/gym-functional-training-equipment-600x600.jpg" alt="11" width="auto" height="auto" title="iStock-1133759237" style="max-width:100%;height:auto;" />
+                                                                <img loading="lazy" src="upload/gym-functional-training-equipment-600x600.jpg" alt="Gym functional training equipment" width="600" height="600" title="iStock-1133759237" style="max-width:100%;height:auto;" />
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="gdlr-core-item-list gdlr-core-gallery-column gdlr-core-column-10">
                                                         <div class="gdlr-core-gallery-list gdlr-core-media-image">
                                                             <a class="gdlr-core-lightgallery gdlr-core-js" href="upload/shutterstock_1061709296.jpg" data-lightbox-group="gdlr-core-img-group-1">
-                                                                <img loading="lazy" src="upload/shutterstock_1061709296-600x600.jpg" alt="11" width="auto" height="auto" title="shutterstock_1061709296" style="max-width:100%;height:auto;" />
+                                                                <img loading="lazy" src="upload/shutterstock_1061709296-600x600.jpg" alt="Fitness class" width="600" height="600" title="shutterstock_1061709296" style="max-width:100%;height:auto;" />
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="gdlr-core-item-list gdlr-core-gallery-column gdlr-core-column-10">
                                                         <div class="gdlr-core-gallery-list gdlr-core-media-image">
                                                             <a class="gdlr-core-lightgallery gdlr-core-js" href="upload/iStock-1163928786.jpg" data-lightbox-group="gdlr-core-img-group-1">
-                                                                <img loading="lazy" src="upload/iStock-1163928786-600x600.jpg" alt="11" width="auto" height="auto" title="iStock-1163928786" style="max-width:100%;height:auto;" />
+                                                                <img loading="lazy" src="upload/iStock-1163928786-600x600.jpg" alt="Group fitness" width="600" height="600" title="iStock-1163928786" style="max-width:100%;height:auto;" />
                                                             </a>
                                                         </div>
                                                     </div>
