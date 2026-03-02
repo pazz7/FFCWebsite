@@ -13,6 +13,8 @@
     <!-- Resource hints for faster loading -->
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -275,7 +277,7 @@
     <style>
 /* Critical CSS - Above the fold rendering */
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#000;color:#fff;overflow-x:hidden}
+body{margin:0;padding:0;font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.8;background:#000;color:#fff;overflow-x:hidden}
 img{max-width:100%;height:auto}
 .clearfix::after{content:"";display:block;clear:both}
 a{text-decoration:none;color:inherit}
@@ -287,25 +289,60 @@ a{text-decoration:none;color:inherit}
 .zyth-mobile-header-wrap{display:none}
 @media only screen and (max-width:999px){
   .zyth-mobile-header-wrap{display:block}
-  .zyth-header-wrap{display:none}
+  .zyth-header-wrap.zyth-header-style-plain,.zyth-header-wrap.zyth-header-style-bar,
+  .zyth-navigation-bar-wrap,.zyth-header-background-transparent,.zyth-header-boxed-wrap,
+  .zyth-header-side-nav,.zyth-header-transparent-substitute,.zyth-sticky-navigation{display:none!important}
 }
 
 /* Mobile header base styles */
-.zyth-mobile-header{position:relative;z-index:999;background:#000}
-.zyth-mobile-header.zyth-sticky-mobile-navigation{position:fixed;top:0;left:0;right:0}
-.zyth-mobile-header-container{display:flex;align-items:center;justify-content:space-between;padding:10px 15px}
+.zyth-mobile-header{position:relative;z-index:999;padding-top:15px;padding-bottom:15px;box-shadow:0 1px 2px rgba(0,0,0,.1)}
+.zyth-mobile-header.zyth-fixed-navigation{display:none}
+@media only screen and (max-width:999px){.zyth-mobile-header.zyth-fixed-navigation{display:block}}
+.zyth-mobile-header.zyth-sticky-mobile-navigation{position:relative}
+.zyth-mobile-header .zyth-mobile-header-container{position:relative}
+.zyth-mobile-header .zyth-logo-inner{line-height:45px;margin-right:80px}
+.zyth-mobile-header .zyth-logo-inner img{vertical-align:middle;width:auto}
+body .zyth-mobile-header .zyth-logo{padding:0 15px}
 .zyth-logo img{max-height:47px;width:auto}
 .zyth-logo .zyth-orig-logo{display:none}
+@media only screen and (max-width:999px){.zyth-mobile-header .zyth-logo-inner{max-width:87px}}
 
-/* Desktop header base styles */
-.zyth-header-wrap{position:relative;z-index:99}
-.zyth-header-background{background:#000}
-.zyth-header-container-item{display:flex;align-items:center;justify-content:space-between}
-.zyth-navigation .menu{list-style:none;margin:0;padding:0;display:flex}
-.zyth-navigation .menu li{margin:0 15px}
-.zyth-navigation .menu a{color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+/* Mobile menu button */
+.zyth-mobile-menu-button,.zyth-top-menu-button{position:absolute;right:15px;top:50%;transform:translateY(-50%);cursor:pointer}
+.zyth-mobile-menu-button i,.zyth-top-menu-button i{color:#fff}
+.zyth-mobile-button-hamburger{width:30px;height:30px;position:relative}
+.zyth-mobile-button-hamburger:before,.zyth-mobile-button-hamburger:after,.zyth-mobile-button-hamburger span{content:'';display:block;width:20px;height:2px;background:#fff;position:absolute;left:5px}
+.zyth-mobile-button-hamburger:before{top:9px}
+.zyth-mobile-button-hamburger span{top:14px}
+.zyth-mobile-button-hamburger:after{top:19px}
 
-/* Hero / Slider area placeholder */
+/* Desktop header */
+.zyth-header-wrap{position:relative;z-index:101}
+.zyth-header-background,.zyth-sticky-menu-placeholder{background-color:#111}
+.zyth-header-style-plain{position:relative;border-bottom-style:solid;z-index:101}
+.zyth-header-style-plain .zyth-header-background{position:absolute;right:0;left:0;top:0;bottom:0}
+.zyth-header-container-item{position:relative}
+.zyth-navigation .sf-menu{display:inline-block;line-height:1.7;text-align:left;margin-bottom:0}
+.zyth-navigation .sf-menu>li{padding-left:20px;padding-right:20px}
+.zyth-navigation .sf-menu>li>a{font-size:17px;font-weight:600;letter-spacing:0;text-transform:none;color:#fff}
+.zyth-navigation{padding-top:40px}
+.zyth-navigation .sf-menu>li>a{padding-bottom:26px}
+.zyth-logo{padding-top:0;padding-bottom:28px}
+.zyth-logo.zyth-item-pdlr{padding-left:20px}
+.zyth-logo-inner{max-width:173px}
+.zyth-header-style-plain.zyth-style-menu-left .zyth-logo{float:left}
+.zyth-header-style-plain.zyth-style-menu-left .zyth-navigation{overflow:hidden}
+.zyth-header-style-plain.zyth-style-menu-left .zyth-main-menu{float:left;vertical-align:top}
+.zyth-header-style-plain.zyth-style-menu-left .zyth-main-menu-right-wrap{float:right;line-height:1.7;margin-left:10px;vertical-align:top}
+
+/* Revolution Slider critical styles */
+rs-module-wrap{position:relative;display:block;visibility:hidden;background:transparent;padding:0;margin:0 auto}
+rs-module{position:relative;overflow:hidden}
+.tp-rs-img{position:relative;width:100%;height:100%}
+rs-slides{position:relative;overflow:hidden}
+rs-slide{position:absolute;top:0;left:0;width:100%;height:100%}
+
+/* Hero / Slider area */
 .zyth-content-area{min-height:60vh;position:relative}
 #rev_slider_1_1_wrapper{min-height:60vh;background:#111}
 
@@ -313,27 +350,38 @@ a{text-decoration:none;color:inherit}
 .zyth-body-outer-wrapper{min-height:100%;position:relative;overflow:hidden}
 .zyth-body-wrapper{z-index:1;position:relative}
 
-/* Prevent layout shift for key elements */
-.gdlr-core-pbf-wrapper{min-height:50px}
+/* Page builder basics */
+.gdlr-core-pbf-wrapper{position:relative;min-height:20px}
+.gdlr-core-pbf-wrapper-content{position:relative}
+.gdlr-core-pbf-background-wrap{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden}
+.gdlr-core-container{margin-left:auto;margin-right:auto;max-width:1150px}
+.gdlr-core-pbf-column{float:left}
+.gdlr-core-column-60{width:100%}
+.gdlr-core-column-30{width:50%}
+.gdlr-core-column-20{width:33.333%}
+.gdlr-core-item-pdlr{padding-left:15px;padding-right:15px}
+.gdlr-core-item-pdb{padding-bottom:30px}
 
-/* Hide content that needs full CSS to render properly */
+/* Prevent layout shift */
 .zyth-modern-menu-nav-base{display:none}
-@media only screen and (max-width:999px){
-  .zyth-modern-menu-nav-base{display:none}
-}
+@media only screen and (max-width:999px){.zyth-modern-menu-nav-base{display:none}}
 </style>
 
+    <!-- Preload LCP images for faster rendering -->
+    <link rel="preload" href="upload/fusion-fitness-club-makati-martial-arts-gym-overlay.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="upload/fusion-fitness-club-makati-martial-arts-gym-hero.jpg" as="image" />
+
     <!-- Deferred CSS (non-render-blocking) -->
-    <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/fontawesome/font-awesome.css" />
+    <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/fontawesome/font-awesome.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/elegant/elegant-font.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/ionicons/ionicons.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/gdlr-custom-icon/gdlr-custom-icon.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/style.css" />
-    <link rel="stylesheet" href="js/plugins/goodlayers-core/include/css/page-builder.css" />
+    <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/style.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="js/plugins/goodlayers-core/include/css/page-builder.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="js/plugins/mp-timetable/media/css/style.css?ver=2.4.2" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="css/style-core.css" />
-    <link rel="stylesheet" href="css/zyth-style-custom.css" />
-    <link rel="stylesheet" href="js/plugins/revslider/public/assets/css/rs6.css?ver=6.5.8" />
+    <link rel="stylesheet" href="css/style-core.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="css/zyth-style-custom.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="js/plugins/revslider/public/assets/css/rs6.css?ver=6.5.8" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="css/text-readability-fix.css" media="print" onload="this.media='all'" />
     <noscript>
         <link rel="stylesheet" href="js/plugins/goodlayers-core/plugins/fontawesome/font-awesome.css" />
@@ -649,13 +697,12 @@ a{text-decoration:none;color:inherit}
                                             <rs-module id="rev_slider_1_1" data-version="6.5.8">
                                                 <rs-slides>
                                                     <rs-slide style="position: absolute;" data-key="rs-1" data-title="Slide" data-in="o:0;" data-out="a:false;" data-p2="01 Our Company">
-                                                        <img fetchpriority="high" src="js/plugins/revslider/public/assets/assets/dummy.png"
-                                                             alt="slider-img"
+                                                        <img fetchpriority="high" src="upload/fusion-fitness-club-makati-martial-arts-gym-hero.jpg"
+                                                             alt="Fusion Fitness Club Makati martial arts gym hero"
                                                              title="slider-1"
                                                              width="1784"
                                                              height="1184"
-                                                             class="rev-slidebg tp-rs-img rs-lazyload"
-                                                             data-lazyload="upload/fusion-fitness-club-makati-martial-arts-gym-hero.jpg"
+                                                             class="rev-slidebg tp-rs-img"
                                                              data-bg="p:center top;"
                                                              data-no-retina="" />
 
@@ -695,12 +742,11 @@ a{text-decoration:none;color:inherit}
                                                                   data-dim="w:416px,322px,344px,212px;h:198px,153px,164px,101px;"
                                                                   data-frame_999="o:0;st:w;sR:8700;"
                                                                   style="z-index: 8;">
-                                                            <img src="js/plugins/revslider/public/assets/assets/dummy.png"
-                                                                 alt="slider-img"
-                                                                 class="tp-rs-img rs-lazyload"
+                                                            <img src="upload/slider-1-1.png"
+                                                                 alt="Fusion Fitness Club slider text"
+                                                                 class="tp-rs-img"
                                                                  width="416"
                                                                  height="198"
-                                                                 data-lazyload="upload/slider-1-1.png"
                                                                  data-no-retina="" />
                                                         </rs-layer>
 
@@ -737,12 +783,11 @@ a{text-decoration:none;color:inherit}
                                                                   data-dim="w:720px,558px,423px,260px;h:353px,273px,207px,127px;"
                                                                   data-frame_999="o:0;st:w;sR:8700;"
                                                                   style="z-index: 9;">
-                                                            <img src="js/plugins/revslider/public/assets/assets/dummy.png"
-                                                                 alt="slider-img"
-                                                                 class="tp-rs-img rs-lazyload"
+                                                            <img fetchpriority="high" src="upload/fusion-fitness-club-makati-martial-arts-gym-overlay.png"
+                                                                 alt="Fusion Fitness Club Makati martial arts infused gym overlay"
+                                                                 class="tp-rs-img"
                                                                  width="720"
                                                                  height="353"
-                                                                 data-lazyload="upload/fusion-fitness-club-makati-martial-arts-gym-overlay.png"
                                                                  data-no-retina="" />
                                                         </rs-layer>
 
